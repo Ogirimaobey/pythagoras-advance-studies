@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V3 - Pythagoras Advance Studies | Final Concept</title>
+    <title>V5 - Pythagoras Advance Studies | Final</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -41,7 +41,6 @@
             width: 100%;
         }
 
-        /* --- Rebuilt Navigation and Logo --- */
         .navbar {
             background: var(--white-color);
             position: fixed;
@@ -68,7 +67,6 @@
             text-decoration: none;
         }
         
-        /* The CSS Logo from the Concept */
         .logo-shape {
             width: 45px;
             height: 52px;
@@ -109,10 +107,10 @@
         }
         .nav-menu ul li a:hover { color: var(--secondary-color); }
         
-        /* --- Hero Section with Reliable Image --- */
         .hero {
             background-color: var(--primary-color); /* Fallback color */
-            background: linear-gradient(rgba(10, 34, 64, 0.8), rgba(10, 34, 64, 0.8)), url('https://images.unsplash.com/photo-1607988796542-8d39f404b958?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            /* --- UPDATED BACKGROUND IMAGE: STUDENTS IN MATRICULATION GOWNS --- */
+            background: linear-gradient(rgba(10, 34, 64, 0.85), rgba(10, 34, 64, 0.85)), url('https://i.postimg.cc/bN9d3v4j/matriculation-students.jpg') no-repeat center center/cover;
             color: var(--white-color);
             min-height: 100vh;
             display: flex;
@@ -154,7 +152,6 @@
             color: var(--secondary-color);
         }
         
-        /* --- Features Section with Reliable Images --- */
         .features {
             padding: 6rem 0;
             background: var(--light-gray);
@@ -193,7 +190,6 @@
         .card-content .icon { font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem; }
         .card-content h3 { font-size: 1.6rem; color: var(--primary-color); margin-bottom: 0.7rem; }
 
-        /* Footer */
         .footer {
             background: var(--primary-color);
             color: rgba(255, 255, 255, 0.8);
@@ -204,15 +200,13 @@
         .footer a { color: var(--secondary-color); text-decoration: none; }
         .footer a:hover { text-decoration: underline; }
 
-        /* Animation on Scroll */
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-        /* Responsive */
         @media(max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1.1rem; }
-            .nav-menu { display: none; /* Simplification for snippet, would need JS for hamburger */ }
+            .nav-menu { display: none; }
             .nav-container { justify-content: center; }
         }
     </style>
@@ -260,7 +254,7 @@
                         </div>
                     </div>
                     <div class="feature-card">
-                        <img class="card-image" src="https://images.unsplash.com/photo-1615875605825-5eb9bb5fea38?q=80&w=2070&auto=format&fit=crop" alt="Clean and modern hostel room">
+                        <img class="card-image" src="https://images.pexels.com/photos/8136932/pexels-photo-8136932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Comfortable and modern student accommodation">
                         <div class="card-content">
                             <div class="icon"><i class="fa-solid fa-hotel"></i></div>
                             <h3>Optional Hostel</h3>
@@ -288,7 +282,6 @@
     </footer>
 
     <script>
-        // Add shadow to navbar on scroll
         const navbar = document.getElementById('navbar');
         window.onscroll = () => {
             if (window.scrollY > 50) {
@@ -298,7 +291,6 @@
             }
         };
 
-        // Add fade-in animation on scroll
         const faders = document.querySelectorAll('.fade-in');
         const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
         const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
