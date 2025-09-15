@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V6 - Pythagoras Advance Studies | Responsive & Final Image</title>
+    <title>V7 - Pythagoras Advance Studies | Admissions Feature Added</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -108,8 +108,7 @@
         .nav-menu ul li a:hover { color: var(--secondary-color); }
         
         .hero {
-            background-color: var(--primary-color); /* Fallback color */
-            /* --- CUSTOM BACKGROUND IMAGE PROVIDED BY USER --- */
+            background-color: var(--primary-color);
             background: linear-gradient(rgba(10, 34, 64, 0.85), rgba(10, 34, 64, 0.85)), url('https://i.postimg.cc/Jzfw9Q5K/image.png') no-repeat center center/cover;
             color: var(--white-color);
             min-height: 100vh;
@@ -152,15 +151,16 @@
             color: var(--secondary-color);
         }
         
-        .features {
-            padding: 6rem 0;
-            background: var(--light-gray);
-        }
         .section-title {
             text-align: center;
             margin-bottom: 4rem;
             font-size: 2.8rem;
             color: var(--primary-color);
+        }
+
+        .features {
+            padding: 6rem 0;
+            background: var(--light-gray);
         }
 
         .features-grid {
@@ -190,6 +190,51 @@
         .card-content .icon { font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem; }
         .card-content h3 { font-size: 1.6rem; color: var(--primary-color); margin-bottom: 0.7rem; }
 
+        /* --- Admissions Form Section --- */
+        .admissions {
+            padding: 6rem 0;
+            background-color: var(--white-color);
+        }
+        .admissions-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+        }
+
         .footer {
             background: var(--primary-color);
             color: rgba(255, 255, 255, 0.8);
@@ -203,30 +248,17 @@
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-        /* --- Responsive Design Optimizations --- */
         @media(max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1.1rem; }
             .section-title { font-size: 2.2rem; }
-            .logo-text { font-size: 1rem; }
-            .logo-text span { font-size: 0.8rem; }
-            .logo-shape { width: 40px; height: 46px; font-size: 24px; margin-right: 8px; }
-
-            /* Simple mobile nav hide - for full site, would implement a hamburger menu with JS */
             .nav-menu { display: none; }
-            .nav-container { justify-content: center; } /* Center logo when nav links are hidden */
-            
-            .btn {
-                padding: 0.8rem 2rem;
-                font-size: 1.1rem;
-            }
+            .nav-container { justify-content: center; }
         }
-
         @media(max-width: 480px) {
             .hero h1 { font-size: 2rem; }
             .hero p { font-size: 1rem; }
-            .container { padding: 0 1rem; }
-            .section-title { font-size: 1.8rem; }
+            .admissions-form { padding: 2rem; }
         }
     </style>
 </head>
@@ -246,6 +278,7 @@
                     <ul>
                         <li><a href="#hero">Home</a></li>
                         <li><a href="#features">Programmes</a></li>
+                        <li><a href="#admissions">Admissions</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -257,7 +290,7 @@
         <section class="hero" id="hero">
             <h1>Don't Waste Another Year at Home.</h1>
             <p>Secure 200L Admission Into Any Nigerian University — Without JAMB!</p>
-            <a href="#" class="btn">Start Your Application</a>
+            <a href="#admissions" class="btn">Start Your Application</a>
         </section>
 
         <section class="features fade-in" id="features">
@@ -291,6 +324,40 @@
                 </div>
             </div>
         </section>
+
+        <section class="admissions fade-in" id="admissions">
+            <div class="container">
+                <h2 class="section-title">Begin Your Application</h2>
+                <form class="admissions-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Desired Course of Study</label>
+                        <select id="course" name="course">
+                            <option value="">-- Select a Course --</option>
+                            <option value="medicine">Medicine & Surgery</option>
+                            <option value="law">Law</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="business">Business Administration</option>
+                            <option value="sciences">Social Sciences</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Submit Application</button>
+                </form>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer fade-in" id="contact">
