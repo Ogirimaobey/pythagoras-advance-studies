@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V7 - Pythagoras Advance Studies | Admissions Feature Added</title>
+    <title>V8 - Pythagoras Advance Studies | Address Added</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -190,7 +190,6 @@
         .card-content .icon { font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem; }
         .card-content h3 { font-size: 1.6rem; color: var(--primary-color); margin-bottom: 0.7rem; }
 
-        /* --- Admissions Form Section --- */
         .admissions {
             padding: 6rem 0;
             background-color: var(--white-color);
@@ -235,15 +234,32 @@
             cursor: pointer;
         }
 
+        /* --- Updated Footer --- */
         .footer {
             background: var(--primary-color);
             color: rgba(255, 255, 255, 0.8);
             text-align: center;
             padding: 4rem 0;
         }
-        .footer p { margin-bottom: 1rem; }
-        .footer a { color: var(--secondary-color); text-decoration: none; }
-        .footer a:hover { text-decoration: underline; }
+        .footer-contact {
+            margin-bottom: 2rem;
+        }
+        .footer-contact p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        .footer-contact i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+        .footer a {
+            color: var(--white-color); /* Making links white for better contrast */
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
 
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
@@ -357,13 +373,16 @@
                 </form>
             </div>
         </section>
-
     </main>
 
     <footer class="footer fade-in" id="contact">
         <div class="container">
+            <div class="footer-contact">
+                <p><i class="fa-solid fa-location-dot"></i>NO 668, Opposite Bekind Petrol Filling Station, University Road, Tanke, Ilorin, Kwara State.</p>
+                <p><i class="fa-solid fa-phone"></i>Phone: <a href="tel:+2348124309301">0812 430 9301</a></p>
+                <p><i class="fa-solid fa-envelope"></i>Email: <a href="mailto:pythagorasalevels@gmail.com">pythagorasalevels@gmail.com</a></p>
+            </div>
             <p>&copy; 2025 Pythagoras Advance Studies. All Rights Reserved.</p>
-            <p>For inquiries, email us at: <a href="mailto:pythagorasalevels@gmail.com">pythagorasalevels@gmail.com</a></p>
         </div>
     </footer>
 
